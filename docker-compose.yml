@@ -19,6 +19,11 @@ services:
     restart: on-failure
     environment:
       - DATABASE_URL=postgresql://postgres:postgres@db/catuserbot
+      - APP_ID=${APP_ID}
+      - API_HASH=${API_HASH}
+      - STRING_SESSION=${STRING_SESSION}
+      - TG_BOT_TOKEN=${TG_BOT_TOKEN}
+      - PRIVATE_GROUP_BOT_API_ID=${PRIVATE_GROUP_BOT_API_ID}
     depends_on:
       - db
 
